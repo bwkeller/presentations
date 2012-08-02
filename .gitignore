@@ -1,5 +1,5 @@
-.DS_Store
-.svn
-log/*.log
-tmp/**
-node_modules/
+*.swp
+layout/deploy
+deploy
+*.hyde_deps
+*.DS_Store
