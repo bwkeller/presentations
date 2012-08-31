@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 		
-		<title>reveal.js - HTML5 Presentations</title>
+		<title>Symposium Day 2012</title>
 
 		<meta name="description" content="An easy to use CSS 3D slideshow tool for quickly creating good looking HTML presentations.">
 		<meta name="author" content="Hakim El Hattab">
@@ -19,6 +19,12 @@
 		<link rel="stylesheet" href="css/print.css" type="text/css" media="print">
 
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<script type="text/x-mathjax-config">
+			  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+		</script>
+		<script type="text/javascript"
+				src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
 	</head>
 	
 	<body>
@@ -26,45 +32,42 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-markdown>
-					# Stellar Feedback in Simulated Galaxies: Doing it Right
-					## Summer Graduate Colloquium 2012
+					# Implementing Feedback In Simulated Galaxies
+					## Symposium Day 2012
 
 					## Ben Keller
-					### August 2, 2012
-				</section>
-				<section data-markdown>
-					# Or: How To Do Science Not Like An Idiot
-				</section>
-				<section data-markdown>
-					# What On Earth Am I Talking About?
+					### September 4, 2012
 				</section>
 				<section >
 					<h1>Outline Time</h1>
 					<ul>
 						<li class="fragment">A Brief History of (Simulated) Time</li>
-						<li class="fragment">Why Simulated Galaxies Are Broken</li>
-						<li class="fragment">Why The Fixes Are Nothing Of The Sort</li>
-						<li class="fragment">What To Do About This</li>
-						<li class="fragment">What <em>I</em> Have Done About This</li>
-						 <!--<li class="fragment">SPH, AMR, OMG WTF</li>-->
+						<li class="fragment">Why Feedback Matters</li>
+						<li class="fragment">The State of the Art</li>
+						<li class="fragment">Moving Forward</li>
 					</ul>
-				</section>
-				<section><h1>It All Began With The Toomre Brothers</h1></section>
-				<section>
-					<h1>OK, Not Really.<h1>
-					<h1>But Almost Really.<h1>
 				</section>
 				<section><a class="image"><img height=640 src="lib/media/antenna_toomre.gif"></a></section>
-				<section><a class="image"><img height=640 src="lib/media/bad_dudes.png"></a></section>
 				<section>
-					<h1>SPH, AMR, OMG, WTF</h1>
-					<ul>
-						<li class="fragment">Gas is a thing, right?</li>
-						<li class="fragment">So are Stars</li>
-					</ul>
+					<p align="center"><iframe src="http://player.vimeo.com/video/29769051?title=0&amp;byline=0&amp;portrait=0&amp;autoplay=1&amp;loop=1&amp;api=1&amp;player_id=vimeo" width="800" height="450" frameborder="0"></iframe>
 				</section>
-				<section><a class="image"><img height=640 src="lib/media/discretize_all_the_things.png"></a></section>
-				<section><a class="image"><img height=640 src="lib/media/all_the_things.png"></a></section>
+				<section>
+				<a class="image"><img height=600 src="lib/media/galaxy_simulation.png"></a>
+				<p>Hopkins, Quatert, &amp; Murray 2012 MNRAS 421</p>
+				</section>
+				<section data-markdown>
+					# Dark Matter is Simple
+					# $$ \nabla^2 \Phi = 4\pi G \rho $$
+				</section>
+				<section><a class="image"><img height=600 src="lib/media/darkmatter.gif"></a></section>
+				<section data-markdown>
+					# Baryons Are Not
+					## $ \nabla \cdot \mathbf{E} = 4\pi\rho $ $ \nabla \cdot \mathbf{B} = 0 $
+					## $ \nabla \times \mathbf{E} = \frac{1}{c}\frac{\partial\mathbf{B}}{\partial t} $ $ \nabla \times \mathbf{B} \frac{1}{c}\frac{\partial\mathbf{E}}{\partial t} + \frac{4\pi}{c}\mathbf{J}$
+				</section>
+				<section><a class="image"><img height=640 src="lib/media/sun.jpg"></a></section>
+				<section><a class="image"><img height=640 src="lib/media/crabnebula.jpg"></a></section>
+				<section><a class="image"><img height=640 src="lib/media/baby.jpg"></a></section>
 				<section><h1>A Few Particular Problems</h1></section>
 				<section><a class="image"><img height=640 src="lib/media/tulley_fisher.gif"></a></section>
 				<section><a class="image"><img height=640 src="lib/media/stellar_mass_fraction.png"></a></section>
@@ -77,16 +80,15 @@
 					</ul>
 				</section>
 				<section>
-					<h1>Is Feedback The Solution?</h1>
+					<h1>Feedback: The Solution?</h1>
 					<ul>
 						<li class="fragment">Supernovae</li>
 						<li class="fragment">AGN</li>
 						<li class="fragment">Radiation from Massive Stars</li>
 					</ul>
 				</section>
-				<section><h1>What Is Wrong With Current Feedback Solutions?</h1></section>
 				<section>
-					<h1>They Are Ad-Hoc</h1>
+					<h1>Physics is Hard</h1>
 					<ul>
 						<li class="fragment">How Much Energy?</li>
 						<li class="fragment">Thermal or Kinetic Energy?</li>
@@ -95,20 +97,6 @@
 						<li class="fragment">Do You Do Anything Fancy?</li>
 					</ul>
 				</section>
-				<section><a class="image"><img height=640 src="lib/media/stellar_mass_fraction.png"></a></section>
-				<section>
-					<h1>A Journey of A Thousand Miles...</h1>
-					<ul>
-						<li class="fragment">High-Resolution Simulations</li>
-						<li class="fragment">Include Some Actual Physics</li>
-						<li class="fragment">Compare With Current Models</li>
-						<li class="fragment">Scale Up!</li>
-					</ul>
-				</section>
-				<section><a class="image"><img height=640 src="lib/media/tiny_box_scale.jpg"></a></section>
-				<section><a class="image"><img height=640 src="lib/media/density_evolution.png"></a></section>
-				<section><a class="image"><img height=640 src="lib/media/temperature_evolution.png"></a></section>
-				<section><a class="image"><img height=640 src="lib/media/SFR.png"></a></section>
 				<section>
 					<h1>References</h1>
 					<ul>
