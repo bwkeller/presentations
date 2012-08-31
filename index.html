@@ -32,148 +32,155 @@
 		<div class="reveal">
 			<div class="slides">
 				<section data-markdown>
-					# Implementing Feedback In Simulated Galaxies
+					# Modeling Feedback In Simulated Galaxies
 					<br />
 					<br />
 					## Ben Keller
+					<br />
 					### Symposium Day
 					### September 4, 2012
 				</section>
-				<section >
-					<h1>Outline Time</h1>
-					<br />
-					<br />
-					<ul>
-						<li class="fragment">A Brief History of (Simulated) Time</li>
-						<li class="fragment">Why Feedback Matters</li>
-						<li class="fragment">The State of the Art</li>
-						<li class="fragment">Moving Forward</li>
-					</ul>
-				</section>
 				<section>
-					<a class="image"><img height=640 src="lib/media/antenna_toomre.gif"></a>
+					<h1>The Antennae Galaxies: An Early Success</h1>
+					<a class="image"><img height=450 src="lib/media/antenna_toomre.png"></a>
 					<p><small>Caroll &amp; Ostlie <i>An Introduction To Modern Astrophysics</i></small></p>
 				</section>
-				<section>
-					<a class="image"><img height=600 src="lib/media/galaxy_simulation.png"></a>
-					<p><small>Hopkins, Quatert, &amp; Murray 2012, MNRAS <b>421</b> 4</small></p>
-				</section>
 				<section data-markdown>
-					# Dark Matter is Simple
+					# Dark Matter is Collisionless
 					<br />
 					# $$ \nabla^2 \Phi = 4\pi G \rho $$
-				</section>
-				<section><a class="image"><img height=600 src="lib/media/darkmatter.gif"></a></section>
-				<section data-markdown>
-					# Baryons Are Not
 					<br />
-					<br />
-					## $ \nabla \cdot \mathbf{E} = 4\pi\rho $ $ \nabla \cdot \mathbf{B} = 0 $
-					## $ \nabla \times \mathbf{E} = \frac{1}{c}\frac{\partial\mathbf{B}}{\partial t} $ $ \nabla \times \mathbf{B} \frac{1}{c}\frac{\partial\mathbf{E}}{\partial t} + \frac{4\pi}{c}\mathbf{J}$
+					# The only physics you need is gravity
 				</section>
-				<section><a class="image"><img height=640 src="lib/media/sun.jpg"></a></section>
-				<section><a class="image"><img height=640 src="lib/media/crabnebula.jpg"></a></section>
-				<section><a class="image"><img height=640 src="lib/media/baby.jpg"></a></section>
-				<section><h1>What Do We Know About Galaxies?</h1></section>
+				<section>
+					<h1>Simuating collisionless systems is well understood</h1>
+					<a class="image"><img height=450 src="lib/media/darkmatter.jpg"></a>
+				</section>
+				<section>
+					<h1>Simuating galaxies is much harder</h1>
+					<a class="image"><img height=450 src="lib/media/galaxy_simulation.png"></a>
+					<p><small>Hopkins, Quatert, &amp; Murray 2012, MNRAS <b>421</b> 4</small></p>
+				</section>
 				<section >
 					<h1>Galaxy Observables</h1>
 					<br />
 					<br />
 					<ul>
-						<li class="fragment">Luminosity Functions</li>
-						<li class="fragment">Tully-Fisher/Faber-Jackson Relation</li>
-						<li class="fragment">Schmidt Law</li>
-						<li class="fragment">Outflows</li>
-						<li class="fragment">Star Formation History</li>
+						<li>Luminosity Functions</li>
+						<li>Tully-Fisher/Faber-Jackson Relation</li>
+						<li>Schmidt Law</li>
+						<li>Star Formation History</li>
+						<li>Outflows</li>
 					</ul>
 				</section>
 				<section>
-					<a class="image"><img height=640 src="lib/media/tulley_fisher.gif"></a>
-					<p><small>Navarro &amp; Steinmetz 2000, ApJ <b>528</b> 2</small></p>
-				</section>
-				<section>
-					<a class="image"><img height=640 src="lib/media/stellar_mass_fraction.png"></a>
-					<p><small>Scannapieco et al 2012, MNRAS <b>423</b> 2</small></p>
-				</section>
-				<section>
-					<h1>What's Going On Here?</h1>
-					<br />
-					<br />
-					<ul>
-						<li class="fragment">Angular Momentum Shedding</li>
-						<li class="fragment">Overcooling</li>
-						<li class="fragment">Everything is starbursting</li>
-					</ul>
-				</section>
-				<section>
-					<h1>Feedback: The Solution?</h1>
-					<br />
-					<br />
-					<ul>
-						<li class="fragment">Supernovae</li>
-						<li class="fragment">Radiation from Massive Stars</li>
-						<li class="fragment">AGN</li>
-					</ul>
-				</section>
-				<section>
-					<a class="image"><img height=600 src="lib/media/stellar_mass_feedback.png"></a>
+					<h1>Luminosity Function</h1>
+					<a class="image"><img height=540 src="lib/media/luminosity_function.png"></a>
 					<p><small>Hopkins 2012, Santa Cruz Galaxy Workshop</small></p>
 				</section>
 				<section>
-					<a class="image"><img height=600 src="lib/media/starburst99.gif"></a>
+					<h1>Tully-Fisher Relationship: Correct?</h1>
+					<a class="image"><img width=950 src="lib/media/tulley_fisher_new.gif"></a>
+					<p><small>Navarro &amp; Steinmetz 2000, ApJ <b>528</b> 2</small></p>
+					<p><small>Governato 2006, Marseille Cosmology Conference</small></p>
+				</section>
+				<section>
+					<h1>Star Formation History</h1>
+					<a class="image"><img height=540 src="lib/media/stellar_mass_fraction.png"></a>
+					<p><small>Scannapieco et al 2012, MNRAS <b>423</b> 2</small></p>
+				</section>
+				<section>
+					<h1>Outflows</h1>
+					<a class="image"><img height=550 src="lib/media/m82.jpg"></a>
+				</section>
+				<section>
+					<h1>Why Don't Simulations Work?</h1>
+					<br />
+					<br />
+					<br />
+					<br />
+					<ul>
+						<li>Angular Momentum Catastrophe</li>
+						<li>Overcooling</li>
+						<li>Too Many Stars!</li>
+					</ul>
+				</section>
+				<section data-markdown>
+					# Feedback: The Solution?
+					<br />
+					<br />
+					<ul>
+						<li>Supernovae</li>
+						<li>Massive Stars</li>
+						<ul>
+							<li>Radiation Pressure</li>
+							<li>UV Radiation/Ionization</li>
+							<li>Stellar Winds</li>
+						</ul>
+						<li>Active Galactic Nuclei</li>
+					</ul>
+				</section>
+				<section>
+					<h1>Different Processes Govern Different Galaxies</h1>
+					<a class="image"><img height=460 src="lib/media/stellar_mass_feedback.png"></a>
+					<p><small>Hopkins 2012, Santa Cruz Galaxy Workshop</small></p>
+				</section>
+				<section>
+					<h1>The Luminosity of Feedback Sources is Well Known</h1>
+					<a class="image"><img height=450 src="lib/media/starburst99.gif"></a>
 					<p><small>Letherer et al 1999, ApJS <b>123</b> 3</small></p>
 				</section>
 				<section>
-					<h1>The Answers Don't Simply Fall Out</h1>
+				<h1>The Answers Seem Obvious</h1>
 					<br />
 					<br />
 					<ul>
-						<li class="fragment">How Much Energy?</li>
-						<li class="fragment">Thermal or Kinetic Energy?</li>
-						<li class="fragment">Where Do You Put it?</li>
-						<li class="fragment"><em>When</em> Do You Put it?</li>
+						<li>How Much Energy?</li>
+						<li>Thermal or Kinetic Energy?</li>
+						<li>Where Do You Put it?</li>
+						<li><em>When</em> Do You Put it?</li>
 					</ul>
+					<br />
+					<br />
+					<br />
+					<br />
+					<h1>How to translate them into a model isn't</h1>
 				</section>
 				<section>
-				<h1>Feedback Processes are Local!</h1>
+				<h1>Feedback Processes are Unresolved!</h1>
 					<br />
-					<h2>$r_{SNe} \lt\lt h$<h2>
-					<h2>$r_{GMC} \lt\lt h$<h2>
+					<h2>$ r_{SNe} \lt\lt $ Spatial Resolution</h2>
+					<h2>$ r_{GMC} \lt\lt $ Spatial Resolution</h2>
 					<br />
-					<h2>$t_{cool} \approx 10^{-3} t_{dyn}$</h2>
-				</section>
-				<section>
-					<h1>Easy Problems Are No Fun</h1>
-					<br />
-					<br />
-					<ul>
-						<li class="fragment">Start Small</li>
-						<li class="fragment">Extrapolate</li>
-						<li class="fragment">Simplify</li>
-					</ul>
+					<h2>$ t_{cool} \lt\lt $ Temporal Resolution</h2>
 				</section>
 				<section>
 					<h1>Start Small, Work Up</h1>
 					<br />
 					<br />
+					<br />
+					<br />
 					<ul>
-						<li class="fragment">Single Stars</li>
-						<li class="fragment">Disk Slices</li>
-						<li class="fragment">Isolated Galaxies</li>
+						<li>Individual Star Clusters</li>
+						<li>Galactic Disk Slices</li>
+						<li>Isolated Galaxies</li>
 					</ul>
 				</section>
 				<section>
-					<a class="image"><img height=700 src="lib/media/density_evolution.png"></a>
+					<h1>Galactic Disk Slice</h1>
+					<br />
+					<br />
+					<iframe src="http://player.vimeo.com/video/48622145?title=0&amp;byline=0&amp;portrait=0&amp;loop=1" 
+					width="750" height="375" frameborder="0"
+					webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 				</section>
 				<section>
-					<a class="image"><img height=700 src="lib/media/temperature_evolution.png"></a>
+					<h1>Regulated Star Formation</h1>
+					<a class="image"><img height=550 src="lib/media/SFR.png"></a>
 				</section>
-				<section data-markdown>
-					# Simplify  
-					<br />
-					<br />
-					## $f(galaxy) = Everything$
-					## Is never going to happen
+				<section>
+					<h1>Where this work is headed</h1>
+					<a class="image"><img height=500 src="lib/media/antenna_observed.jpg"></a>
 				</section>
 				<section>
 				<h1>In Conclusion</h1>
@@ -185,15 +192,6 @@
 					<li>Large scale properties of unresolved feedback can be implemented with careful consideration</li>
 					</div>
 				</section>
-				<!--<section data-markdown>-->
-					<!--# In Conclusion-->
-					<!--<br />-->
-					<!--<br />-->
-					<!--## Nature has a bigger computer than we do-->
-					<!--<br />-->
-					<!--## But hopefully we can be more clever-->
-				<!--</section>-->
-				<section><h1>Thank you!</h1></section>
 			</div>
 
 			<!-- Presentation progress bar -->
